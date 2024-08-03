@@ -1,0 +1,37 @@
+dataSources:
+- kind: ethereum
+  mapping:
+    abis:
+    - file: ./abis/TreasureManager.json
+      name: TreasureManager
+    apiVersion: 0.0.7
+    entities:
+    - DepositToken
+    - WithdrawToken
+    - GrantRewardTokenAmount
+    - WithdrawManagerUpdate
+    eventHandlers:
+    - event: DepositToken(indexed address,indexed address,uint256)
+      handler: handleDepositToken
+      receipt: true
+    - event: WithdrawToken(indexed address,address,address,uint256)
+      handler: handleWithdrawToken
+      receipt: true
+    - event: GrantRewardTokenAmount(indexed address,address,uint256)
+      handler: handleGrantRewardTokenAmount
+      receipt: true
+    - event: WithdrawManagerUpdate(indexed address)
+      handler: handleWithdrawManagerUpdate
+      receipt: true
+    file: ./src/dapplink-treasure.ts
+    kind: ethereum/events
+    language: wasm/assemblyscript
+  name: TreasureManager
+  network: mainnet
+  source:
+    abi: TreasureManager
+    address: ''
+    startBlock: 0
+schema:
+  file: ./schema.graphql
+specVersion: 0.0.5
