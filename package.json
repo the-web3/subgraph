@@ -1,13 +1,13 @@
 {
-  "name": "DapplinkTreasure",
+  "name": "dapplink-tr",
   "license": "UNLICENSED",
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ theweb3",
-    "create-local": "graph create --node http://127.0.0.1:8020/ dapplinktreasure",
-    "remove-local": "graph remove --node http://127.0.0.1:8020/ dapplinktreasure",
-    "deploy-local": "graph deploy --node http://127.0.0.1:8020/ --ipfs http://127.0.0.1:5001 dapplinktreasure",
+    "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ dapplink-tr",
+    "create-local": "graph create --node http://127.0.0.1:8020/ dapplink-tr",
+    "remove-local": "graph remove --node http://127.0.0.1:8020/ dapplink-tr",
+    "deploy-local": "graph deploy --node http://127.0.0.1:8020/ --ipfs http://127.0.0.1:5001 dapplink-tr",
     "meda": "yarn remove-local && yarn create-local && yarn deploy-local",
     "test": "graph test"
   },

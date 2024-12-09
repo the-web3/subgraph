@@ -31,7 +31,7 @@ dataSources:
     source:
       abi: TreasureManager
       address: '9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0'
-      startBlock: 0
+      startBlock: 1
 schema:
   file: ./schema.graphql
 specVersion: 0.0.5
